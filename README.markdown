@@ -1,6 +1,13 @@
 # Precure
 
-Japanese Anime Precure (Pretty Cure) Library
+Japanese Anime Precure (Pretty Cure) Library.
+
+Inspired by [Acme::PrettyCure](http://perl-users.jp/articles/advent-calendar/2010/acme/6), [pycure](https://github.com/drillbits/pycure) and [Rubicure](https://github.com/sue445/rubicure).
+
+## Installation
+
+	$ cd ~/.lisp/systems
+	$ git clone git://github.com/stibear/precure
 
 ## Usage
 
