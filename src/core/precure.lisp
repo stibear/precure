@@ -1,5 +1,7 @@
 (in-package :precure)
 
+(cl-syntax:use-syntax :annot)
+
 @export
 (defgeneric transform (girl &key destination)
   (:documentation "girl transforms into precure."))
@@ -122,5 +124,13 @@
      (cadr term))))
 
 @export
-(defmacro precure (key &optional (hash-table *precure-table*))
-  `(gethash ,key ,hash-table))
+(defun (setf precure) (key &optional (hash-table *precure-table*))
+  (gethash key hash-table))
+
+@export
+(defun all-stars (&optional (hash-table *precure-table*))
+  (let (tmp)
+    (maphash (lambda (key value)
+	       (setf tmp (nconc (girls value) tmp)))
+	     hash-table)
+    tmp))

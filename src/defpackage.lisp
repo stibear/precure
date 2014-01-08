@@ -7,4 +7,3 @@
 
 @export
 (defvar *precure-table* (make-hash-table :test #'equal))
-

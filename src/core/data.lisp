@@ -1,5 +1,7 @@
 (in-package :precure)
 
+(cl-syntax:use-syntax :annot)
+
 (defvar *precures*
     '(("" "ふたりはプリキュア" ("2004-02-01" "2005-01-30"))
       ("maxheart" "ふたりはプリキュア Max Heart" ("2005-02-06" "2006-1-29"))
