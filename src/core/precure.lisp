@@ -124,8 +124,12 @@
      (cadr term))))
 
 @export
-(defun (setf precure) (key &optional (hash-table *precure-table*))
+(defun precure (key &optional (hash-table *precure-table*))
   (gethash key hash-table))
+
+@export
+(defun (setf precure) (value key &optional (hash-table *precure-table*))
+  (setf (gethash key hash-table) value))
 
 @export
 (defun all-stars (&optional (hash-table *precure-table*))
